@@ -76,6 +76,7 @@
         enable = true;
       	brews =[
           "bitwarden-cli"
+          "composer"
           "ffmpeg"
           "java"
           "julia"
