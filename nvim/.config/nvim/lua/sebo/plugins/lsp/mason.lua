@@ -44,7 +44,6 @@ return {
         "ltex",
         "tinymist",
         "taplo",
-        "wasm_language_tools",
       },
     })
 
@@ -61,6 +60,7 @@ return {
         "swiftlint",
         "nixpkgs-fmt",
         "debugpy",
+        "wasm-language-tools",
       },
     })
   end,
