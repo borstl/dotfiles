@@ -100,11 +100,13 @@
           "jetbrains-toolbox"
           "karabiner-elements"
           "logi-options+"
+          "lookaway"
           "lunar"
           "mactex"
           "makemkv"
           # "microsoft-edge"
           "microsoft-teams"
+          "miniconda"
           "mkvtoolnix-app" # needs Rosetta2
           "obsidian"
           "plex"
@@ -134,7 +136,6 @@
           "Final Cut Pro" = 424389933;
           "Infuse" = 1136220934;
           "Logic Pro" = 634148309;
-          "LookAway" = 6747192301;
           "Microsoft Excel" = 462058435;
           "Numbers" = 409203825;
           "Notability" = 360593530;
