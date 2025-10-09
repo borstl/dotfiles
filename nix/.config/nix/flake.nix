@@ -9,6 +9,8 @@
   # nix flake update
   # To run config:
   # nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/.config/nix#SebBook
+  # regularly cleanup old data and paths:
+  # nix-collect-garbage --delete-old
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -93,8 +95,9 @@
           "docker-desktop"
           "cleanmymac"
           # "ea"
-          # "forklift" # No license for >4.3
+          "forklift" # No license for >4.3
           "ghostty"
+          "google-chrome"
           "inkscape"
           "inkstitch"
           "jetbrains-toolbox"
@@ -171,12 +174,11 @@
           autohide = true;
       	  autohide-delay = 0.0;
       	  autohide-time-modifier = 0.0;
-      	  magnification = false;
+      	  magnification = true;
       	  mineffect ="scale";
-      	  orientation ="left";
       	  mru-spaces = false;
+      	  orientation ="left";
       	  persistent-apps =[
-      	    "/System/Applications/Launchpad.app"
       	    "/Applications/ForkLift.app"
             "Applications/Arc.app"
       	    # "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
