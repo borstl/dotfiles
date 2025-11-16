@@ -48,7 +48,7 @@
       environment.systemPackages = [
           pkgs.bat
           # pkgs.bitwarden-cli
-          pkgs.du-dust
+          pkgs.dust
           pkgs.eza
           pkgs.fd
           pkgs.fzf
