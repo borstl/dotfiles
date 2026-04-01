@@ -107,9 +107,9 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="$PATH:$HOME/.local/bin"
 
 # load PyEnv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
+#export PYENV_ROOT="$HOME/.pyenv"
+#[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init - zsh)"
 
 # load Java
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH" # Java
@@ -118,8 +118,8 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH" # Java
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=($HOME/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
+# fpath=($HOME/.docker/completions $fpath)
+# autoload -Uz compinit
+# compinit
 # End of Docker CLI completions
 

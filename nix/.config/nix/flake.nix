@@ -80,70 +80,72 @@
           "bitwarden-cli"
           "composer"
           "ffmpeg"
+          "grandperspective"
           "java"
           "julia"
           "luarocks"
           "node"
-          "pyenv"
-          "pyenv-virtualenv"
+#          "pyenv"
+#          "pyenv-virtualenv"
           "rust"
           "zsh-autosuggestions"
           "zsh-syntax-highlighting"
         ];
     	  casks =[
-          "arc"
-          "docker-desktop"
-          "cleanmymac"
+#          "arc"
+#          "docker-desktop"
+#          "cleanmymac"
           # "ea"
           "forklift" # No license for >4.3
           "ghostty"
           "google-chrome"
-          "inkscape"
-          "inkstitch"
+#          "inkscape"
+#          "inkstitch"
           "jetbrains-toolbox"
           "karabiner-elements"
-          "logi-options+"
+#          "logi-options+"
           "lookaway"
           "lunar"
-          "mactex"
+#          "mactex"
           "makemkv"
           # "microsoft-edge"
           "microsoft-teams"
-          "miniconda"
-          "mkvtoolnix-app" # needs Rosetta2
+#          "miniconda"
+#          "mkvtoolnix-app" # needs Rosetta2
           "obsidian"
-          "plex"
-          "prusaslicer"
-          "postman"
-	        "raspberry-pi-imager"
+#          "plex"
+#          "prusaslicer"
+#          "postman"
+#          "raspberry-pi-imager"
           "raycast"
-          "skim"
+#          "skim"
           "sf-symbols"
           "the-unarchiver"
           "tunnelblick"
-          "ultimaker-cura"
+#          "ultimaker-cura"
           "zotero"
         ];
       	masApps ={
           "AdGuard for Safari" = 1440147259;
           "Apple Configurator" = 1037126344;
           "Apple Developer" = 640199958;
-          "Affinity Designer 2" = 1616831348;
-          "Affinity Photo 2" = 1616822987;
+#          "Affinity Designer 2" = 1616831348;
+#          "Affinity Photo 2" = 1616822987;
+          "AusweisApp" = 948660805;
           "Bitwarden" = 1352778147;
-          "CapCut" = 1500855883;
+#          "CapCut" = 1500855883;
           "Compressor" = 424390742;
           "Darkroom" = 953286746;
-          "DevCleaner for Xcode" = 1388020431;
+#          "DevCleaner for Xcode" = 1388020431;
           "eduVPN" = 1317704208;
           "Final Cut Pro" = 424389933;
           "Infuse" = 1136220934;
-          "Logic Pro" = 634148309;
+#          "Logic Pro" = 634148309;
           "Microsoft Excel" = 462058435;
-          "Numbers" = 409203825;
-          "Notability" = 360593530;
+          "Numbers" = 361304891;
+#          "Notability" = 360593530;
           "One Sec" = 1532875441;
-          "Perplexity" = 6714467650;
+#          "Perplexity" = 6714467650;
           "PDF Expert" = 1055273043;
           "Social Focus" = 1661093205;
           "Toggl" = 1291898086;
@@ -180,7 +182,7 @@
       	  orientation ="left";
       	  persistent-apps =[
       	    "/Applications/ForkLift.app"
-            "Applications/Arc.app"
+            "Applications/Dia.app"
       	    # "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
       	    "/System/Applications/Mail.app"
       	    "/System/Applications/Calendar.app"
