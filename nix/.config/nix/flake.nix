@@ -1,16 +1,18 @@
 {
   description ="Sebo Darwin system flake";
 
-  # NOTE before reinstalling System
-  # - be sure config-files are up-to-date and pushed: nix, neovim
-  # - export cold-turkey-blocker sites and application files
-  #
-  # To update nix:
-  # nix flake update
-  # To run config:
-  # nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/.config/nix#SebBook
-  # regularly cleanup old data and paths:
-  # nix-collect-garbage --delete-old
+  /* NOTE
+    before reinstalling System
+     - be sure config-files are up-to-date and pushed: nix, neovim
+     - export cold-turkey-blocker sites and application files
+  
+    To update nix:
+     - nix flake update
+    To run config:
+     - sudo -H darwin-rebuild switch --flake ~/dotfiles/nix/.config/nix#SebBook
+    regularly cleanup old data and paths:
+     - nix-collect-garbage --delete-old
+  */
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -25,23 +27,24 @@
       system.primaryUser = "sebastianbecker";
       nixpkgs.config.allowUnfree = true;
 
-      # NOTE
-      # Packages to install manually:
-      # PyCharm Professional
-      # IntelliJ IDEA Ultimate
-      # Cold-Turkey-Blocker
-      # Micromanager Pro:
-      #   https://vendors.paddle.com/download/product/6d5ecd31-628b-4d12-a672-9ab7e11c708e
-      # Writer Pro:
-      #   https://vendors.paddle.com/download/product/601195
-      # fzf-git:
-      #   git clone https://github.com/junegunn/fzf-git.sh.git
-      # lua5.1.5:
-      #   wget https://www.lua.org/ftp/lua-5.1.5.tar.gz
-      #   tar xvf lua-5.1.5.tar.gz
-      #   cd lua-5.1.5
-      #   make macosx
-      #   sudo make install
+    /* NOTE
+      Packages to install manually:
+        PyCharm Professional
+        IntelliJ IDEA Ultimate
+        Cold-Turkey-Blocker
+        Micromanager Pro:
+         - https://vendors.paddle.com/download/product/6d5ecd31-628b-4d12-a672-9ab7e11c708e
+        Writer Pro:
+         - https://vendors.paddle.com/download/product/601195
+        fzf-git:
+         - git clone https://github.com/junegunn/fzf-git.sh.git
+        lua5.1.5:
+          wget https://www.lua.org/ftp/lua-5.1.5.tar.gz
+          tar xvf lua-5.1.5.tar.gz
+          cd lua-5.1.5
+          make macosx
+          sudo make install
+    */
 
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
@@ -125,8 +128,9 @@
 #          "ultimaker-cura"
           "zotero"
         ];
+        /* NOTE Skip mas until repaired
       	masApps ={
-          "AdGuard for Safari" = 1440147259;
+          "AdGuard: Ad Blocker for Safari" = 1440147259;
           "Apple Configurator" = 1037126344;
           "Apple Developer" = 640199958;
 #          "Affinity Designer 2" = 1616831348;
@@ -152,6 +156,7 @@
           "Vimlike" = 1584519802;
           "Xcode" = 497799835;
         };
+        */
       	onActivation.autoUpdate = true;
       	onActivation.upgrade = true;
         onActivation.cleanup ="zap";
@@ -183,7 +188,7 @@
       	  persistent-apps =[
       	    "/Applications/ForkLift.app"
             "Applications/Dia.app"
-      	    # "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
+      	    # "/System/Volumes/Preboot/Cryptexes/sApp/System/Applications/Safari.app"
       	    "/System/Applications/Mail.app"
       	    "/System/Applications/Calendar.app"
       	    "/System/Applications/Reminders.app"
