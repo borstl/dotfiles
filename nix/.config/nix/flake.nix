@@ -80,7 +80,6 @@
           "bitwarden-cli"
           "composer"
           "ffmpeg"
-          "grandperspective"
           "java"
           "julia"
           "luarocks"
@@ -99,6 +98,7 @@
           "forklift" # No license for >4.3
           "ghostty"
           "google-chrome"
+          "grandperspective"
 #          "inkscape"
 #          "inkstitch"
           "jetbrains-toolbox"
