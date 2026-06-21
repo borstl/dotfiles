@@ -110,7 +110,7 @@
           "lookaway"
           "lunar"
 #          "mactex"
-          "makemkv"
+#          "makemkv" # deprecated in brew; download manually
           # "microsoft-edge"
           "microsoft-teams"
 #          "miniconda"
@@ -128,7 +128,7 @@
 #          "ultimaker-cura"
           "zotero"
         ];
-        /* NOTE Skip mas until repaired
+        /* Skip mas until fixed
       	masApps ={
           "AdGuard: Ad Blocker for Safari" = 1440147259;
           "Apple Configurator" = 1037126344;

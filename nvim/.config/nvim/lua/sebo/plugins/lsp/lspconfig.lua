@@ -9,6 +9,7 @@ return {
   config = function()
     -- import cmp-nvim-lsp plugin
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
+    local util = require("lspconfig.util")
 
     local keymap = vim.keymap -- for conciseness
     vim.api.nvim_create_autocmd("LspAttach", {
@@ -119,6 +120,11 @@ return {
     vim.lsp.config["taplo"] = {}
 
     vim.lsp.config["tinymist"] = {
+      root_dir = util.root_pattern(".git", "main.typ"),
+      settings = {
+        projectResolution = "lockDatabase",
+        rootPath = ".",
+      },
       on_attach = function(client, bufnr)
         vim.keymap.set("n", "<leader>tp", function()
           client:exec_cmd({
