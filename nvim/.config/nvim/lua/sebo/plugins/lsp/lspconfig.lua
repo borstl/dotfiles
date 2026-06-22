@@ -125,22 +125,20 @@ return {
         projectResolution = "lockDatabase",
         rootPath = ".",
       },
-      on_attach = function(client, bufnr)
-        vim.keymap.set("n", "<leader>tp", function()
-          client:exec_cmd({
-            title = "pin",
+      on_attach = function(bufnr)
+        vim.keymap.set("n", "<leader>yp", function()
+          vim.lsp.buf.execute_command({
             command = "tinymist.pinMain",
             arguments = { vim.api.nvim_buf_get_name(0) },
-          }, { bufnr = bufnr })
-        end, { desc = "[T]inymist [P]in", noremap = true })
+          })
+        end, { desc = "Tin[Y]mist [P]in main", buffer = bufnr, noremap = true, silent = true })
 
-        vim.keymap.set("n", "<leader>tu", function()
-          client:exec_cmd({
-            title = "unpin",
+        vim.keymap.set("n", "<leader>yu", function()
+          vim.lsp.buf.execute_command({
             command = "tinymist.pinMain",
-            arguments = { vim.v.null },
-          }, { bufnr = bufnr })
-        end, { desc = "[T]inymist [U]npin", noremap = true })
+            arguments = { nil },
+          })
+        end, { desc = "Tin[Y]mist [U]npin main", bufnr = bufnr, noremap = true, silent = true })
       end,
     }
 
