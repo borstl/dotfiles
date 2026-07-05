@@ -6,23 +6,32 @@ return {
     require("typst-preview").update()
   end,
   opts = {
-    dependecies_bin = {
-      tinymist = "tinymist", -- Mason-installed tinymist
+    dependencies_bin = {
+      tinymist = "tinymist",
     },
 
-    -- Path logic: customize to your project layout
     get_main_file = function(path_of_buffer)
-      -- Example 1: main.typ in the project root (git root)
+      local function is_readable(path)
+        return vim.fn.filereadable(path) == 1
+      end
+
       local git_root = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
       if git_root and git_root ~= "" then
-        return git_root .. "/main.typ"
+        local git_main = git_root .. "/main.typ"
+        if is_readable(git_main) then
+          return git_main
+        end
       end
-      -- Fallback: directory of the current buffer
-      return vim.fn.fnamemodify(path_of_buffer, ":p:h") .. "/main.typ"
+
+      local local_main = vim.fn.fnamemodify(path_of_buffer, ":p:h") .. "/main.typ"
+      if is_readable(local_main) then
+        return local_main
+      end
+
+      return path_of_buffer
     end,
 
     get_root = function(path_of_main_file)
-      -- Use the directory of main.typ as root
       return vim.fn.fnamemodify(path_of_main_file, ":p:h")
     end,
   },
