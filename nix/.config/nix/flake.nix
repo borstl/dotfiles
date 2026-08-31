@@ -104,12 +104,11 @@
           "grandperspective"
 #          "inkscape"
 #          "inkstitch"
-          "jetbrains-toolbox"
+#          "jetbrains-toolbox"
           "karabiner-elements"
 #          "logi-options+"
           "lookaway"
           "lunar"
-#          "mactex"
 #          "makemkv" # deprecated in brew; download manually
           # "microsoft-edge"
           "microsoft-teams"
@@ -126,7 +125,7 @@
           "the-unarchiver"
           "tunnelblick"
 #          "ultimaker-cura"
-          "zotero"
+#          "zotero"
         ];
         /* Skip mas until fixed
       	masApps ={
@@ -193,7 +192,7 @@
       	    "/System/Applications/Calendar.app"
       	    "/System/Applications/Reminders.app"
       	    "/Applications/Obsidian.app"
-            "/Applications/Zotero.app"
+#            "/Applications/Zotero.app"
             "/Applications/Ghostty.app"
       	    "/System/Applications/Music.app"
       	    "/System/Applications/System Settings.app"

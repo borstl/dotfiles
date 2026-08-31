@@ -123,3 +123,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # compinit
 # End of Docker CLI completions
 
+export PATH="/opt/homebrew/bin:$PATH"
